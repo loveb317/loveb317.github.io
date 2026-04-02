@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杜宥均 | 产品运营实习生个人主页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        dark: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            .section-padding { @apply py-16 md:py-20; }
+            .card-hover { @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1; }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+<!-- 顶部导航 -->
+<header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#home" class="text-xl font-bold text-primary">Welcome</a>
+        <nav class="hidden md:flex gap-6">
+            <a href="#home" class="hover:text-primary">首页</a>
+            <a href="#about" class="hover:text-primary">关于我</a>
+            <a href="#skills" class="hover:text-primary">核心能力</a>
+            <a href="#experience" class="hover:text-primary">实习经历</a>
+            <a href="#projects" class="hover:text-primary">项目成果</a>
+            <a href="#hobbies" class="hover:text-primary">兴趣爱好</a>
+            <a href="#contact" class="hover:text-primary">联系我</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden text-xl">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white px-4 py-2 shadow-md">
+        <div class="flex flex-col gap-3 py-2">
+            <a href="#home" class="py-1 hover:text-primary">首页</a>
+            <a href="#about" class="py-1 hover:text-primary">关于我</a>
+            <a href="#skills" class="py-1 hover:text-primary">核心能力</a>
+            <a href="#experience" class="py-1 hover:text-primary">实习经历</a>
+            <a href="#projects" class="py-1 hover:text-primary">项目成果</a>
+            <a href="#hobbies" class="py-1 hover:text-primary">兴趣爱好</a>
+            <a href="#contact" class="py-1 hover:text-primary">联系我</a>
+        </div>
+    </div>
+</header>
+
+<!-- 首页首屏（已替换你的证件照） -->
+<section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-blue-50 to-slate-100">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2 space-y-6">
+            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-dark text-shadow">
+                你好，我是<br><span class="text-primary">杜宥均</span>
+            </h1>
+            <p class="text-lg text-slate-600">
+                28届 | 深圳大学网络与新媒体 | 产品运营实习生
+            </p>
+            <p class="text-slate-500">
+                以产品思维拆解需求，用用户思维创造价值，数据驱动落地迭代
+            </p>
+            <div class="flex gap-4 pt-2">
+                <a href="#about" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition">
+                    了解更多
+                </a>
+                <a href="#contact" class="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary/5 transition">
+                    联系我
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-200 overflow-hidden shadow-md">
+                <a href="https://imgchr.com/i/peJmEAe"><img src="https://s41.ax1x.com/2026/04/02/peJmEAe.jpg" alt="peJmEAe.jpg" border="0" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 关于我 -->
+<section id="about" class="section-padding bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-3">关于我</h2>
+            <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="max-w-3xl mx-auto space-y-6 text-slate-700">
+            <p>
+                我是杜宥均，19岁，28届求职者，就读于深圳大学传播学院**网络与新媒体（网络传播方向）**，选修<strong>计算传播学</strong>、<strong>人机传播</strong>微专业，求职意向为<strong>产品运营实习生</strong>。
+            </p>
+            <p>
+                具备扎实的<strong>产品思维</strong>与<strong>用户思维</strong>，擅长用户需求挖掘、用户分层运营、产品链路优化与数据驱动迭代，拥有从用户研究到产品落地的全流程思维，注重用户体验与业务目标的平衡。
+            </p>
+            <p>
+                ESFJ型人格，高效学习、强执行、善沟通，擅长多任务拆解与跨场景落地，致力于成为懂用户、懂数据、懂产品的专业产品运营人才。
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 核心能力 -->
+<section id="skills" class="section-padding bg-slate-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-3">核心能力</h2>
+            <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 用户与需求 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                <i class="fa fa-users text-2xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-3">用户与需求</h3>
+                <ul class="space-y-2 text-slate-600">
+                    <li>• 用户洞察与分层运营</li>
+                    <li>• 定性+定量需求挖掘</li>
+                    <li>• 用户痛点分析与解决方案</li>
+                </ul>
+            </div>
+            
+            <!-- 产品与数据 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                <i class="fa fa-line-chart text-2xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-3">产品与数据</h3>
+                <ul class="space-y-2 text-slate-600">
+                    <li>• 产品链路优化与迭代</li>
+                    <li>• 数据指标监控与复盘</li>
+                    <li>• 数据驱动策略调整</li>
+                </ul>
+            </div>
+            
+            <!-- 落地与协作 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                <i class="fa fa-cogs text-2xl text-primary mb-4"></i>
+                <h3 class="text-xl font-semibold mb-3">落地与协作</h3>
+                <ul class="space-y-2 text-slate-600">
+                    <li>• 产品方案拆解与执行</li>
+                    <li>• 高效沟通与跨方协作</li>
+                    <li>• 全流程项目推进与复盘</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 实习与经历 -->
+<section id="experience" class="section-padding bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-3">实习与实践经历</h2>
+            <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="max-w-2xl mx-auto space-y-8">
+            <!-- 实习经历 -->
+            <div class="border-l-2 border-primary/30 pl-6 relative">
+                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                <h3 class="text-xl font-semibold">海道教育 | 用户增长实习生</h3>
+                <p class="text-slate-500 mb-2">2025.11-2026.01</p>
+                <p class="text-slate-700">以用户思维做分层运营，基于用户行为数据做需求拆解，优化产品转化链路与沟通策略，弱化营销强化价值，显著提升用户响应与私域转化效率。</p>
+            </div>
+
+            <!-- 校园经历1：产品化内容运营 -->
+            <div class="border-l-2 border-primary/30 pl-6 relative">
+                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                <h3 class="text-xl font-semibold">深圳大学传播学院新媒体部 | 运营编辑</h3>
+                <p class="text-slate-500 mb-2">2024.09-2025.06</p>
+                <p class="text-slate-700">以产品思维做内容策划，基于用户阅读偏好优化内容结构，完成内容产品化落地，4篇核心内容累计7k+阅读，验证用户需求匹配能力。</p>
+            </div>
+
+            <!-- 校园经历2：用户增长运营 -->
+            <div class="border-l-2 border-primary/30 pl-6 relative">
+                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                <h3 class="text-xl font-semibold">深圳大学传播学院辩论队 | 队长兼运营</h3>
+                <p class="text-slate-500 mb-2">2024.09-至今</p>
+                <p class="text-slate-700">挖掘新生用户核心需求，独立完成增长方案策划与落地，通过需求匹配的内容触达，实现报名人数从40人至140人的大幅增长。</p>
+            </div>
+
+            <!-- 校园经历3：用户触达优化 -->
+            <div class="border-l-2 border-primary/30 pl-6 relative">
+                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                <h3 class="text-xl font-semibold">深圳大学荔声合唱团 | 运营编辑</h3>
+                <p class="text-slate-500 mb-2">2025.09-至今</p>
+                <p class="text-slate-700">负责用户触达内容产品化落地，基于受众偏好优化表达与呈现形式，作品被校级平台转载，具备优质用户触达能力。</p>
+            </div>
+            
+            <!-- 校园经历4：用户需求响应 -->
+            <div class="border-l-2 border-primary/30 pl-6 relative">
+                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                <h3 class="text-xl font-semibold">原此刻MOMENTO | 用户需求运营</h3>
+                <p class="text-slate-500 mb-2">2025.06-2025.09</p>
+                <p class="text-slate-700">建立快速需求响应机制，精准捕捉用户核心诉求并拆解落地，以用户体验为核心优化服务流程，提升用户满意度。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 项目成果 -->
+<section id="projects" class="section-padding bg-slate-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-3">项目成果</h2>
+            <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- 项目1：用户增长与链路优化 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold mb-2">用户增长与转化链路优化项目</h3>
+                    <p class="text-slate-600 text-sm mb-3">用户分层 | 需求挖掘 | 链路迭代</p>
+                    <p class="text-sm text-slate-600">立足用户痛点做产品化运营，以用户思维重构沟通与转化链路，数据驱动持续迭代，实现用户响应与转化效率双提升。</p>
+                </div>
+            </div>
+            
+            <!-- 项目2：用户研究与需求建模 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold mb-2">新媒体用户研究与需求建模项目</h3>
+                    <p class="text-slate-600 text-sm mb-3">用户研究 | 定性定量 | 需求框架</p>
+                    <p class="text-sm text-slate-600">全流程用户研究，完成数据采集、深度访谈与分析，构建用户需求模型，锤炼产品运营核心的需求洞察与分析能力。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 兴趣爱好 -->
+<section id="hobbies" class="section-padding bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-3">兴趣爱好</h2>
+            <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
+                <i class="fa fa-music mr-1"></i> 拉小提琴
+            </span>
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
+                <i class="fa fa-headphones mr-1"></i> 听音乐
+            </span>
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
+                <i class="fa fa-gamepad mr-1"></i> 玩游戏
+            </span>
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
+                <i class="fa fa-film mr-1"></i> 看电影
+            </span>
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
+                <i class="fa fa-plane mr-1"></i> 旅行
+            </span>
+        </div>
+    </div>
+</section>
+
+<!-- 联系我 -->
+<section id="contact" class="section-padding bg-slate-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-3">联系我</h2>
+            <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-sm p-8">
+            <div class="space-y-5">
+                <a href="tel:18728031718" class="flex items-center gap-4 text-slate-700 hover:text-primary transition">
+                    <i class="fa fa-phone text-xl w-6 text-center"></i>
+                    <span>18728031718（微信同号）</span>
+                </a>
+                <a href="mailto:1245583240@qq.com" class="flex items-center gap-4 text-slate-700 hover:text-primary transition">
+                    <i class="fa fa-envelope text-xl w-6 text-center"></i>
+                    <span>1245583240@qq.com</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 text-slate-700 hover:text-primary transition">
+                    <i class="fa fa-graduation-cap text-xl w-6 text-center"></i>
+                    <span>深圳大学传播学院 | 网络与新媒体</span>
+                </a>
+            </div>
+            
+            <div class="mt-8 text-center text-slate-500">
+                <p>期待产品运营实习机会，欢迎交流合作</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="bg-dark text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+        <p class="mb-2">&copy; 2026 杜宥均 | 产品运营实习生个人主页</p>
+        <p class="text-sm text-slate-400">产品思维锚定方向，用户思维创造价值</p>
+    </div>
+</footer>
+
+<script>
+    // 移动端菜单切换
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+    
+    // 点击移动端导航后关闭菜单
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
+</script>
+</body>
+</html>
