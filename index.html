@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>杜宥均 | 产品运营实习生个人主页</title>
+    <title>杜宥均 | 产品运营 · 数据驱动 · AI落地</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -11,21 +11,27 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
                         dark: '#0f172a',
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
                     },
+                    boxShadow: {
+                        'card': '0 4px 20px -2px rgba(30, 64, 175, 0.08)',
+                        'card-hover': '0 10px 30px -5px rgba(30, 64, 175, 0.15)',
+                    }
                 }
             }
         }
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-            .section-padding { @apply py-16 md:py-20; }
-            .card-hover { @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1; }
+            .text-shadow { text-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+            .section-padding { @apply py-16 md:py-24; }
+            .card-hover { @apply transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1; }
+            .number-highlight { @apply text-primary font-bold; }
         }
         html {
             scroll-behavior: smooth;
@@ -33,19 +39,18 @@
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
-
 <!-- 顶部导航 -->
-<header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+<header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#home" class="text-xl font-bold text-primary">Welcome</a>
-        <nav class="hidden md:flex gap-6">
-            <a href="#home" class="hover:text-primary">首页</a>
-            <a href="#about" class="hover:text-primary">关于我</a>
-            <a href="#skills" class="hover:text-primary">核心能力</a>
-            <a href="#experience" class="hover:text-primary">实习经历</a>
-            <a href="#projects" class="hover:text-primary">项目成果</a>
-            <a href="#hobbies" class="hover:text-primary">兴趣爱好</a>
-            <a href="#contact" class="hover:text-primary">联系我</a>
+        <a href="#home" class="text-xl font-bold text-primary">杜宥均</a>
+        <nav class="hidden md:flex gap-6 text-sm">
+            <a href="#home" class="hover:text-primary transition-colors">首页</a>
+            <a href="#about" class="hover:text-primary transition-colors">关于我</a>
+            <a href="#skills" class="hover:text-primary transition-colors">核心能力</a>
+            <a href="#experience" class="hover:text-primary transition-colors">实习经历</a>
+            <a href="#projects" class="hover:text-primary transition-colors">项目成果</a>
+            <a href="#hobbies" class="hover:text-primary transition-colors">兴趣特长</a>
+            <a href="#contact" class="hover:text-primary transition-colors">联系我</a>
         </nav>
         <button id="menuBtn" class="md:hidden text-xl">
             <i class="fa fa-bars"></i>
@@ -53,42 +58,41 @@
     </div>
     <div id="mobileMenu" class="md:hidden hidden bg-white px-4 py-2 shadow-md">
         <div class="flex flex-col gap-3 py-2">
-            <a href="#home" class="py-1 hover:text-primary">首页</a>
-            <a href="#about" class="py-1 hover:text-primary">关于我</a>
-            <a href="#skills" class="py-1 hover:text-primary">核心能力</a>
-            <a href="#experience" class="py-1 hover:text-primary">实习经历</a>
-            <a href="#projects" class="py-1 hover:text-primary">项目成果</a>
-            <a href="#hobbies" class="py-1 hover:text-primary">兴趣爱好</a>
-            <a href="#contact" class="py-1 hover:text-primary">联系我</a>
+            <a href="#home" class="py-1 hover:text-primary transition-colors">首页</a>
+            <a href="#about" class="py-1 hover:text-primary transition-colors">关于我</a>
+            <a href="#skills" class="py-1 hover:text-primary transition-colors">核心能力</a>
+            <a href="#experience" class="py-1 hover:text-primary transition-colors">实习经历</a>
+            <a href="#projects" class="py-1 hover:text-primary transition-colors">项目成果</a>
+            <a href="#hobbies" class="py-1 hover:text-primary transition-colors">兴趣特长</a>
+            <a href="#contact" class="py-1 hover:text-primary transition-colors">联系我</a>
         </div>
     </div>
 </header>
 
-<!-- 首页首屏（已替换你的证件照） -->
-<section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-blue-50 to-slate-100">
+<!-- 首页首屏 -->
+<section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-blue-50 via-white to-slate-100">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
         <div class="md:w-1/2 space-y-6">
             <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-dark text-shadow">
                 你好，我是<br><span class="text-primary">杜宥均</span>
             </h1>
-            <p class="text-lg text-slate-600">
-                28届 | 深圳大学网络与新媒体 | 产品运营实习生
+            <p class="text-lg text-slate-600 font-medium">
+                深圳大学28届 · 网络与新媒体 · 产品运营方向
             </p>
-            <p class="text-slate-500">
-                以产品思维拆解需求，用用户思维创造价值，数据驱动落地迭代
-            </p>
-            <div class="flex gap-4 pt-2">
-                <a href="#about" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition">
-                    了解更多
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="#experience" class="bg-primary text-white px-7 py-3 rounded-full hover:bg-primary/90 transition-all shadow-md hover:shadow-lg">
+                    查看经历
                 </a>
-                <a href="#contact" class="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary/5 transition">
+                <a href="#contact" class="border border-primary text-primary px-7 py-3 rounded-full hover:bg-primary/5 transition-all">
                     联系我
                 </a>
             </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
-            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-200 overflow-hidden shadow-md">
-                <a href="https://imgchr.com/i/peJmEAe"><img src="https://s41.ax1x.com/2026/04/02/peJmEAe.jpg" alt="peJmEAe.jpg" border="0" />
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-200 overflow-hidden shadow-xl ring-4 ring-white">
+                <a href="https://imgchr.com/i/peJmEAe">
+                    <img src="https://s41.ax1x.com/2026/04/02/peJmEAe.jpg" alt="杜宥均证件照" class="w-full h-full object-cover" border="0" />
+                </a>
             </div>
         </div>
     </div>
@@ -102,15 +106,18 @@
             <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
         
-        <div class="max-w-3xl mx-auto space-y-6 text-slate-700">
+        <div class="max-w-3xl mx-auto space-y-5 text-slate-700 leading-relaxed">
             <p>
-                我是杜宥均，19岁，28届求职者，就读于深圳大学传播学院**网络与新媒体（网络传播方向）**，选修<strong>计算传播学</strong>、<strong>人机传播</strong>微专业，求职意向为<strong>产品运营实习生</strong>。
+                我是杜宥均，深圳大学传播学院<strong>网络与新媒体（网络传播方向）</strong>28届本科生，同步修读<strong>计算传播学</strong>、<strong>人机传播</strong>双微专业，核心求职方向为产品运营，聚焦AI产品领域。
             </p>
             <p>
-                具备扎实的<strong>产品思维</strong>与<strong>用户思维</strong>，擅长用户需求挖掘、用户分层运营、产品链路优化与数据驱动迭代，拥有从用户研究到产品落地的全流程思维，注重用户体验与业务目标的平衡。
+                具备完整的<strong>「方案落地-数据监控-问题分析-迭代优化」</strong>运营闭环思维，擅长从用户真实诉求出发，结合定量数据与定性访谈挖掘核心痛点，通过标准化流程与产品化手段提升运营效率，驱动业务指标增长。
             </p>
             <p>
-                ESFJ型人格，高效学习、强执行、善沟通，擅长多任务拆解与跨场景落地，致力于成为懂用户、懂数据、懂产品的专业产品运营人才。
+                拥有两段垂直领域运营实习经验，实践<strong>自动化运营链路搭建、公域转私域增长、A/B测试落地</strong>自等核心项目，所有策略均通过可量化数据验证效果。
+            </p>
+            <p>
+                <strong>ESFJ</strong>型人格，曾任院学生会部长、辩论队队长，具备团队管理与多方沟通能力；可进行全英语小提琴教学，拥有<strong>跨文化沟通经验</strong>；学习力与执行力突出，可适配多任务并行与快节奏工作场景。
             </p>
         </div>
     </div>
@@ -124,37 +131,60 @@
             <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- 用户与需求 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                <i class="fa fa-users text-2xl text-primary mb-4"></i>
-                <h3 class="text-xl font-semibold mb-3">用户与需求</h3>
-                <ul class="space-y-2 text-slate-600">
-                    <li>• 用户洞察与分层运营</li>
-                    <li>• 定性+定量需求挖掘</li>
-                    <li>• 用户痛点分析与解决方案</li>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- 用户运营 -->
+            <div class="bg-white p-6 rounded-2xl shadow-card card-hover">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                    <i class="fa fa-users text-xl text-primary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">用户研究与运营</h3>
+                <ul class="space-y-2 text-slate-600 text-sm">
+                    <li>• 定性+定量混合研究</li>
+                    <li>• 用户画像与分层运营</li>
+                    <li>• 核心痛点挖掘与转化</li>
+                    <li>• 用户全生命周期管理</li>
                 </ul>
             </div>
             
-            <!-- 产品与数据 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                <i class="fa fa-line-chart text-2xl text-primary mb-4"></i>
-                <h3 class="text-xl font-semibold mb-3">产品与数据</h3>
-                <ul class="space-y-2 text-slate-600">
-                    <li>• 产品链路优化与迭代</li>
-                    <li>• 数据指标监控与复盘</li>
-                    <li>• 数据驱动策略调整</li>
+            <!-- 产品落地 -->
+            <div class="bg-white p-6 rounded-2xl shadow-card card-hover">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                    <i class="fa fa-cubes text-xl text-primary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">产品落地与迭代</h3>
+                <ul class="space-y-2 text-slate-600 text-sm">
+                    <li>• SOP规则配置与校验</li>
+                    <li>• A/B测试方案设计落地</li>
+                    <li>• 产品全链路优化迭代</li>
+                    <li>• 标准化流程搭建提效</li>
                 </ul>
             </div>
             
-            <!-- 落地与协作 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                <i class="fa fa-cogs text-2xl text-primary mb-4"></i>
-                <h3 class="text-xl font-semibold mb-3">落地与协作</h3>
-                <ul class="space-y-2 text-slate-600">
-                    <li>• 产品方案拆解与执行</li>
-                    <li>• 高效沟通与跨方协作</li>
-                    <li>• 全流程项目推进与复盘</li>
+            <!-- 数据分析 -->
+            <div class="bg-white p-6 rounded-2xl shadow-card card-hover">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                    <i class="fa fa-line-chart text-xl text-primary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">数据分析与驱动</h3>
+                <ul class="space-y-2 text-slate-600 text-sm">
+                    <li>• 转化漏斗与动线分析</li>
+                    <li>• 流失节点定位与优化</li>
+                    <li>• 业务指标监控复盘</li>
+                    <li>• 数据驱动策略迭代</li>
+                </ul>
+            </div>
+
+            <!-- 工具技能 -->
+            <div class="bg-white p-6 rounded-2xl shadow-card card-hover">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                    <i class="fa fa-wrench text-xl text-primary"></i>
+                </div>
+                <h3 class="text-lg font-semibold mb-3">工具与硬技能</h3>
+                <ul class="space-y-2 text-slate-600 text-sm">
+                    <li>• Tableau / 八爪鱼 / Python</li>
+                    <li>• Excel等office办公软件</li>
+                    <li>• 剪映 / Canva / 秀米</li>
+                    <li>• AI辅助工具熟练运用</li>
                 </ul>
             </div>
         </div>
@@ -169,45 +199,84 @@
             <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
         
-        <div class="max-w-2xl mx-auto space-y-8">
-            <!-- 实习经历 -->
-            <div class="border-l-2 border-primary/30 pl-6 relative">
-                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
-                <h3 class="text-xl font-semibold">海道教育 | 用户增长实习生</h3>
-                <p class="text-slate-500 mb-2">2025.11-2026.01</p>
-                <p class="text-slate-700">以用户思维做分层运营，基于用户行为数据做需求拆解，优化产品转化链路与沟通策略，弱化营销强化价值，显著提升用户响应与私域转化效率。</p>
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-xl font-semibold mb-6 text-dark">实习经历</h3>
+            <div class="space-y-8 mb-14">
+                <!-- 十方融海 -->
+                <div class="border-l-2 border-primary/30 pl-6 relative">
+                    <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                    <div class="flex flex-wrap justify-between items-start mb-2">
+                        <h4 class="text-xl font-semibold">十方融海 · 产品运营</h4>
+                        <span class="text-slate-500 text-sm">2026.03 - 2026.06</span>
+                    </div>
+                    <p class="text-slate-600 mb-3 text-sm">
+                        负责中老年朗诵体验训练营项目，落地「APP AI助教+企微私域+直播」一体化自动化运营链路，主导双营期A/B测试，以数据驱动产品迭代。
+                    </p>
+                    <ul class="space-y-1.5 text-slate-600 text-sm">
+                        <li>• 完成三类场景SOP配置与上线测试，适配双营期差异化方案，支撑A/B测试落地</li>
+                        <li>• 搭建用户研究体系，落地作品集运营策略，实现用户促活率<span class="number-highlight">76.47%</span></li>
+                        <li>• 优化H5召回链路，将用户APP回流时长从148min缩短至<span class="number-highlight">1min</span></li>
+                        <li>• 设计8套标准化模板，将单份作品集制作时长压缩至5分钟，提升团队效率</li>
+                    </ul>
+                </div>
+
+                <!-- 海道教育 -->
+                <div class="border-l-2 border-primary/30 pl-6 relative">
+                    <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                    <div class="flex flex-wrap justify-between items-start mb-2">
+                        <h4 class="text-xl font-semibold">海道教育 · 用户运营</h4>
+                        <span class="text-slate-500 text-sm">2025.11 - 2026.01</span>
+                    </div>
+                    <p class="text-slate-600 mb-3 text-sm">
+                        针对澳洲悉尼大学新生群体，通过小红书公域运营实现留学后服务公域转私域，优化转化链路与沟通策略。
+                    </p>
+                    <ul class="space-y-1.5 text-slate-600 text-sm">
+                        <li>• 基于用户行为划分为两类群体，迭代沟通话术，弱化营销强化价值前置</li>
+                        <li>• 搭建公域转私域完整运营链路，依托数据反向迭代沟通策略</li>
+                        <li>• 优化后私信回复率显著提升，单日最高私域转化达<span class="number-highlight">10+</span></li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- 校园经历1：产品化内容运营 -->
-            <div class="border-l-2 border-primary/30 pl-6 relative">
-                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
-                <h3 class="text-xl font-semibold">深圳大学传播学院新媒体部 | 运营编辑</h3>
-                <p class="text-slate-500 mb-2">2024.09-2025.06</p>
-                <p class="text-slate-700">以产品思维做内容策划，基于用户阅读偏好优化内容结构，完成内容产品化落地，4篇核心内容累计7k+阅读，验证用户需求匹配能力。</p>
-            </div>
+            <h3 class="text-xl font-semibold mb-6 text-dark">校园实践</h3>
+            <div class="space-y-8">
+                <!-- 辩论队 -->
+                <div class="border-l-2 border-primary/30 pl-6 relative">
+                    <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                    <div class="flex flex-wrap justify-between items-start mb-2">
+                        <h4 class="text-xl font-semibold">传播学院辩论队 · 队长</h4>
+                        <span class="text-slate-500 text-sm">2024.09 - 至今</span>
+                    </div>
+                    <p class="text-slate-600 text-sm">
+                        负责团队管理与赛事运营，挖掘新生核心需求设计增长方案，实现报名人数从<strong>40人至140人</strong>的增长，具备团队领导力与活动落地能力。
+                    </p>
+                    <p class="text-slate-600 text-sm">
+                        荣获2026年深圳大学院际杯<strong>最佳辩手</strong>，带领传播学院辩论队荣获<strong>季军</strong>
+                </div>
 
-            <!-- 校园经历2：用户增长运营 -->
-            <div class="border-l-2 border-primary/30 pl-6 relative">
-                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
-                <h3 class="text-xl font-semibold">深圳大学传播学院辩论队 | 队长兼运营</h3>
-                <p class="text-slate-500 mb-2">2024.09-至今</p>
-                <p class="text-slate-700">挖掘新生用户核心需求，独立完成增长方案策划与落地，通过需求匹配的内容触达，实现报名人数从40人至140人的大幅增长。</p>
-            </div>
+                <!-- 原此刻MOMENTO -->
+                <div class="border-l-2 border-primary/30 pl-6 relative">
+                    <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                    <div class="flex flex-wrap justify-between items-start mb-2">
+                        <h4 class="text-xl font-semibold">原此刻MOMENTO · 运营部</h4>
+                        <span class="text-slate-500 text-sm">2025.06 - 2025.09</span>
+                    </div>
+                    <p class="text-slate-600 text-sm">
+                        建立<strong>≤2小时</strong>用户需求响应机制，负责微信生态内容产品运营，基于用户反馈持续优化内容方向，提升用户活跃度与满意度。
+                    </p>
+                </div>
 
-            <!-- 校园经历3：用户触达优化 -->
-            <div class="border-l-2 border-primary/30 pl-6 relative">
-                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
-                <h3 class="text-xl font-semibold">深圳大学荔声合唱团 | 运营编辑</h3>
-                <p class="text-slate-500 mb-2">2025.09-至今</p>
-                <p class="text-slate-700">负责用户触达内容产品化落地，基于受众偏好优化表达与呈现形式，作品被校级平台转载，具备优质用户触达能力。</p>
-            </div>
-            
-            <!-- 校园经历4：用户需求响应 -->
-            <div class="border-l-2 border-primary/30 pl-6 relative">
-                <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
-                <h3 class="text-xl font-semibold">原此刻MOMENTO | 用户需求运营</h3>
-                <p class="text-slate-500 mb-2">2025.06-2025.09</p>
-                <p class="text-slate-700">建立快速需求响应机制，精准捕捉用户核心诉求并拆解落地，以用户体验为核心优化服务流程，提升用户满意度。</p>
+                <!-- 学生会 -->
+                <div class="border-l-2 border-primary/30 pl-6 relative">
+                    <div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                    <div class="flex flex-wrap justify-between items-start mb-2">
+                        <h4 class="text-xl font-semibold">传播学院学生会 · 部长</h4>
+                        <span class="text-slate-500 text-sm">2024.09 - 至今</span>
+                    </div>
+                    <p class="text-slate-600 text-sm">
+                        统筹部门活动策划与执行，协调跨部门协作，具备高效的沟通能力与多任务管理能力。
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -217,55 +286,69 @@
 <section id="projects" class="section-padding bg-slate-50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-3">项目成果</h2>
+            <h2 class="text-3xl font-bold mb-3">核心项目成果</h2>
             <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- 项目1：用户增长与链路优化 -->
-            <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                <div class="p-5">
-                    <h3 class="text-lg font-semibold mb-2">用户增长与转化链路优化项目</h3>
-                    <p class="text-slate-600 text-sm mb-3">用户分层 | 需求挖掘 | 链路迭代</p>
-                    <p class="text-sm text-slate-600">立足用户痛点做产品化运营，以用户思维重构沟通与转化链路，数据驱动持续迭代，实现用户响应与转化效率双提升。</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- 项目1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-card card-hover">
+                <div class="h-3 bg-gradient-to-r from-primary to-secondary"></div>
+                <div class="p-6 space-y-3">
+                    <h3 class="text-lg font-semibold">中老年朗诵营自动化运营项目</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-blue-50 text-primary text-xs rounded-md">AI助教</span>
+                        <span class="px-2 py-1 bg-blue-50 text-primary text-xs rounded-md">A/B测试</span>
+                        <span class="px-2 py-1 bg-blue-50 text-primary text-xs rounded-md">链路优化</span>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        落地双营期方案测试，搭建「AI助教+私域+直播」自动化运营链路；通过用户洞察落地作品集策略，促活率达76.47%；优化召回链路将回流时长从148分钟压缩至1分钟，验证5天营期更适配用户节奏。
+                    </p>
                 </div>
             </div>
             
-            <!-- 项目2：用户研究与需求建模 -->
-            <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                <div class="p-5">
-                    <h3 class="text-lg font-semibold mb-2">新媒体用户研究与需求建模项目</h3>
-                    <p class="text-slate-600 text-sm mb-3">用户研究 | 定性定量 | 需求框架</p>
-                    <p class="text-sm text-slate-600">全流程用户研究，完成数据采集、深度访谈与分析，构建用户需求模型，锤炼产品运营核心的需求洞察与分析能力。</p>
+            <!-- 项目2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-card card-hover">
+                <div class="h-3 bg-gradient-to-r from-primary to-secondary"></div>
+                <div class="p-6 space-y-3">
+                    <h3 class="text-lg font-semibold">留学生公域转私域增长项目</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-blue-50 text-primary text-xs rounded-md">用户分层</span>
+                        <span class="px-2 py-1 bg-blue-50 text-primary text-xs rounded-md">私域转化</span>
+                        <span class="px-2 py-1 bg-blue-50 text-primary text-xs rounded-md">话术迭代</span>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        针对新生信息繁杂、抵触硬营销的痛点，将用户划分为高需求信息型与泛需求生活型；以学姐式价值前置沟通替代营销话术，建立信任后转化，实现单日私域转化最高10+，用户抵触情绪显著降低。
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 兴趣爱好 -->
+<!-- 兴趣特长 -->
 <section id="hobbies" class="section-padding bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-3">兴趣爱好</h2>
+            <h2 class="text-3xl font-bold mb-3">兴趣与特长</h2>
             <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
         
         <div class="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
-            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
-                <i class="fa fa-music mr-1"></i> 拉小提琴
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition-all cursor-default">
+                <i class="fa fa-music mr-2"></i>小提琴
             </span>
-            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
-                <i class="fa fa-headphones mr-1"></i> 听音乐
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition-all cursor-default">
+                <i class="fa fa-headphones mr-2"></i>音乐
             </span>
-            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
-                <i class="fa fa-gamepad mr-1"></i> 玩游戏
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition-all cursor-default">
+                <i class="fa fa-film mr-2"></i>观影
             </span>
-            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
-                <i class="fa fa-film mr-1"></i> 看电影
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition-all cursor-default">
+                <i class="fa fa-plane mr-2"></i>旅行
             </span>
-            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition">
-                <i class="fa fa-plane mr-1"></i> 旅行
+            <span class="px-5 py-3 bg-slate-100 rounded-full text-slate-700 hover:bg-primary hover:text-white transition-all cursor-default">
+                <i class="fa fa-gamepad mr-2"></i>游戏
             </span>
         </div>
     </div>
@@ -279,24 +362,30 @@
             <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
         
-        <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-sm p-8">
+        <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-card p-8">
             <div class="space-y-5">
-                <a href="tel:18728031718" class="flex items-center gap-4 text-slate-700 hover:text-primary transition">
-                    <i class="fa fa-phone text-xl w-6 text-center"></i>
+                <a href="tel:18728031718" class="flex items-center gap-4 text-slate-700 hover:text-primary transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                        <i class="fa fa-phone text-primary"></i>
+                    </div>
                     <span>18728031718（微信同号）</span>
                 </a>
-                <a href="mailto:1245583240@qq.com" class="flex items-center gap-4 text-slate-700 hover:text-primary transition">
-                    <i class="fa fa-envelope text-xl w-6 text-center"></i>
+                <a href="mailto:1245583240@qq.com" class="flex items-center gap-4 text-slate-700 hover:text-primary transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                        <i class="fa fa-envelope text-primary"></i>
+                    </div>
                     <span>1245583240@qq.com</span>
                 </a>
-                <a href="#" class="flex items-center gap-4 text-slate-700 hover:text-primary transition">
-                    <i class="fa fa-graduation-cap text-xl w-6 text-center"></i>
-                    <span>深圳大学传播学院 | 网络与新媒体</span>
-                </a>
+                <div class="flex items-center gap-4 text-slate-700">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                        <i class="fa fa-graduation-cap text-primary"></i>
+                    </div>
+                    <span>深圳大学传播学院 · 网络与新媒体专业</span>
+                </div>
             </div>
             
-            <div class="mt-8 text-center text-slate-500">
-                <p>期待产品运营实习机会，欢迎交流合作</p>
+            <div class="mt-8 pt-6 border-t border-slate-100 text-center text-slate-500 text-sm">
+                <p>期待产品运营相关实习机会，欢迎沟通交流</p>
             </div>
         </div>
     </div>
@@ -305,8 +394,7 @@
 <!-- 页脚 -->
 <footer class="bg-dark text-white py-8">
     <div class="container mx-auto px-4 text-center">
-        <p class="mb-2">&copy; 2026 杜宥均 | 产品运营实习生个人主页</p>
-        <p class="text-sm text-slate-400">产品思维锚定方向，用户思维创造价值</p>
+        <p class="mb-2 font-medium">&copy; 2026 杜宥均 · 产品运营个人主页</p>
     </div>
 </footer>
 
@@ -335,3 +423,4 @@
 </script>
 </body>
 </html>
+
